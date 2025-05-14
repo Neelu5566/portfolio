@@ -1,38 +1,162 @@
-.App {
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f3f4f6;
+  color: #333;
+}
+
+.container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 1rem;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  border-radius: 10px;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 0;
+  background: #fff;
+}
+
+/* Adjusted logo container to push it a bit from the left */
+.logo {
+  height: 180px; /* adjust as needed */
+  margin-left: 150px; /* shifts it toward center */
+  object-fit: contain;
+  animation: logoBounce 1.5s ease-in-out infinite alternate;
+  filter: brightness(0) saturate(100%); /* makes logo dark black */
+  transition: transform 0.3s ease;
+}
+
+/* Nav links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #4f46e5;
+  font-weight: 500;
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  margin: 2rem 0;
+  gap: 2rem;
+}
+
+.hero-text {
+  flex: 1;
+  min-width: 260px;
+}
+
+.hero-img {
+  flex: 1;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.profile-img-fixed {
+  width: 230px;
+  height: auto;
+  border-radius: 10px;
+  object-fit: contain;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Sections */
+section {
+  margin: 2.5rem 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #4f46e5;
+}
+
+/* Button */
+.btn {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  background-color: #4f46e5;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  margin-top: 1rem;
+}
+
+/* Skills */
+.skills-line {
+  background: #fff;
+  padding: 0.75rem;
+  border-radius: 6px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.05);
+}
+
+/* Projects */
+.project-list {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 1.5rem;
 }
 
-.App-link {
-  color: #61dafb;
+.project {
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 6px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.project h3 {
+  margin-top: 0;
+  color: #333;
+}
+
+/* Certifications */
+.certifications ul {
+  list-style: disc;
+  padding-left: 1.5rem;
+}
+
+.certifications a {
+  color: #4f46e5;
+  text-decoration: none;
+}
+
+/* Contact */
+.contact a {
+  color: #4f46e5;
+  text-decoration: none;
+  margin: 0 0.3rem;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  font-size: 0.9rem;
+  margin-top: 2rem;
+  padding: 1rem 0;
+  border-top: 1px solid #ddd;
+}
+
+/* Animation */
+@keyframes logoBounce {
+  0% {
+    transform: scale(1) rotate(0deg);
   }
-  to {
-    transform: rotate(360deg);
+  100% {
+    transform: scale(1.1) rotate(5deg);
   }
 }
